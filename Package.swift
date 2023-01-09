@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "PagecallSDK",
+    name: "PagecallChimeSDK",
     platforms: [
         .iOS(.v11)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "PagecallSDK",
-            targets: ["PagecallSDK", "AmazonChimeSDK", "AmazonChimeSDKMedia"])
+            name: "PagecallChimeSDK",
+            targets: ["PagecallChimeSDK", "AmazonChimeSDK", "AmazonChimeSDKMedia"])
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "PagecallSDK",
-            path: "Sources/PagecallSDK",
+            name: "PagecallChimeSDK",
+            path: "Sources/PagecallChimeSDK",
             resources: [
                 .process("PagecallNative.js")
             ]),
@@ -30,6 +30,6 @@ let package = Package(
             name: "AmazonChimeSDKMedia",
             path: "Binaries/AmazonChimeSDKMedia.xcframework"),
         .testTarget(
-            name: "PagecallSDKTests",
-            dependencies: ["PagecallSDK"])
+            name: "PagecallChimeSDKTests",
+            dependencies: ["PagecallChimeSDK"])
     ])

@@ -18,9 +18,9 @@
   "scripts": {
     "rollup": "rollup -c",
     "rollup:watch": "yarn rollup --watch",
-    "build:browserify": "browserify dist/index.js -o ../PagecallSDK/PagecallNative.js",
+    "build:browserify": "browserify dist/index.js -o ../PagecallChimeSDK/PagecallNative.js",
     "build": "yarn rollup && yarn build:browserify",
-    "dev": "watchify dist/index.js -o ../PagecallSDK/PagecallNative.js"
+    "dev": "watchify dist/index.js -o ../PagecallChimeSDK/PagecallNative.js"
   },
   "dependencies": {
     "nanoid": "^4.0.0"
